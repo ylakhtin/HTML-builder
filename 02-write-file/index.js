@@ -7,13 +7,12 @@ const inputFile = fs.createWriteStream(path.join(__dirname, 'target.txt'), 'utf-
 
 stdin.on('data', (data) => {
   if (data.toString().trim() === 'exit'){
-    process.exit(1);
+    process.exit();
   } else {
     inputFile.write(data.toString());
   }
 });
 
 process.on('exit', () => {
-  console.log('Bye!');
   stdout.write('Bye!');
 });

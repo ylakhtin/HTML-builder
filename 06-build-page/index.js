@@ -1,6 +1,5 @@
 const fs = require('fs');
 const path = require('path');
-const { stdin } = process;
 
 // create new folder
 fs.rm(path.join(__dirname, 'project-dist'), { force: true, recursive: true }, () => {
